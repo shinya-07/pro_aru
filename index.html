@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Chapter 14: TODOリスト</title>
+</head>
+<body>
+  <main>
+    <div id="input">
+      <label>Bottle: <input id="bottle"></label>
+      <label>Search:<input id = 'search'></label>
+      <br>
+      Category: <select id = "select" >
+        <option value="1">ウイスキー</option>
+        <option value="2">ウォッカ</option>
+        <option value="3">ジン</option>
+        <option value="4">テキーラ</option>
+        <option value="5">日本酒</option>
+        <option value="6">焼酎</option>
+        <option value="7">リキュール</option>
+        <option value="8">その他</option>
+      </select>
+      <button id="submit">登録</button>
+
+      select Category: <select id = "cat_select">
+        <option value="0" selected>すべて</option>
+        <option value="1">ウイスキー</option>
+        <option value="2">ウォッカ</option>
+        <option value="3">ジン</option>
+        <option value="4">テキーラ</option>
+        <option value="5">日本酒</option>
+        <option value="6">焼酎</option>
+        <option value="7">リキュール</option>
+        <option value="8">その他</option>
+      </select>
+      <button id="all_show">Allshow</button>
+      
+    </div>
+
+    <table>
+      <tr>
+        <th id="todoLabel">Bottle</th>
+        <th>Category</th>
+        <th>low</th>
+      </tr>
+    </table>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
