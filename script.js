@@ -2,6 +2,7 @@
 
 const storage = localStorage;
 
+
 const table = document.querySelector('table');
 const bottle = document.getElementById('bottle');
 const search_txet_id = document.getElementById('search')

@@ -3,47 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Chapter 14: TODOリスト</title>
 </head>
 <body>
   <main>
     <div id="input">
-      <label>Bottle: <input id="bottle"></label>
-      <label>Search:<input id = 'search'></label>
-      <br>
-      Category: <select id = "select" >
-        <option value="1">ウイスキー</option>
-        <option value="2">ウォッカ</option>
-        <option value="3">ジン</option>
-        <option value="4">テキーラ</option>
-        <option value="5">日本酒</option>
-        <option value="6">焼酎</option>
-        <option value="7">リキュール</option>
-        <option value="8">その他</option>
-      </select>
-      <button id="submit">登録</button>
+      <div class="container">
+      <!--add data-->
+      <div class="row">
+        <div class="col">
+          <label><input class="form-control" placeholder="add bottel name" aria-label="default input example" id="bottle"></label>
+        </div>
+        <div class="col-auto"></div>
+        <div class="col">
+          <label><input input class="form-control" placeholder="Search" aria-label="default input example"id="search"></label>
+        </div>
 
-      select Category: <select id = "cat_select">
-        <option value="0" selected>すべて</option>
-        <option value="1">ウイスキー</option>
-        <option value="2">ウォッカ</option>
-        <option value="3">ジン</option>
-        <option value="4">テキーラ</option>
-        <option value="5">日本酒</option>
-        <option value="6">焼酎</option>
-        <option value="7">リキュール</option>
-        <option value="8">その他</option>
-      </select>
-      <button id="all_show">Allshow</button>
-      
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="Select1"></label>
+          <select class="form-control" placeholder="choos bouttel category" aria-label="Default select example" id="select">
+            <option value="8" hidden>choos bouttel category</option>
+            <option value="1">ウイスキー</option>
+            <option value="2">ウォッカ</option>
+            <option value="3">ジン</option>
+            <option value="4">テキーラ</option>
+            <option value="5">日本酒</option>
+            <option value="6">焼酎</option>
+            <option value="7">リキュール</option>
+            <option value="8">その他</option>
+          </select>
+        </div>
+        <div class="col-auto"></div>
+        <div class="col">
+            <label for="select1"></label>
+            <select class="form-control" placeholder="Search category" aria-label="Default select example" id="cat_select">
+              <optino value="0" hidden>SearchCategory</optino>
+              <option value="0">すべて</option>
+              <option value="1">ウイスキー</option>
+              <option value="2">ウォッカ</option>
+              <option value="3">ジン</option>
+              <option value="4">テキーラ</option>
+              <option value="5">日本酒</option>
+              <option value="6">焼酎</option>
+              <option value="7">リキュール</option>
+              <option value="8">その他</option>
+            </select>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-outline-primary" id="submit">add</button>
+        </div>
+        <div class="col-auto"></div>
+        <div class="col">
+          <button type="button" class="btn btn-outline-warning" id="all_show">Allshow</button>
+        </div>
+      </div>
+      <br>
+      <!--serch-->
+    </div>
+  </div>
     </div>
 
-    <table>
+    <table class="table">
       <tr>
-        <th id="todoLabel">Bottle</th>
-        <th>Category</th>
-        <th>low</th>
+        <th id="todoLabel" scope="col">Bottle</th>
+        <th scope="col">Category</th>
+        <th scope="col">low</th>
       </tr>
     </table>
   </main>
