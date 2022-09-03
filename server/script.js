@@ -153,3 +153,21 @@ remove.addEventListener('click', () => {
 });
 
 
+logOutButton.addEventListener('click',() => {
+
+  location.href ='/client/signup.html'
+
+})
+
+
+function logOut(){
+  if (cognitoUser != null) {
+
+      $("#loader").show();
+      cognitoUser.signOut();
+      logMessage('Logged out!');
+      $("#loader").hide();
+      location.href ='../signup.html'
+  }
+}
+
