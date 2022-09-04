@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MSN AWS App</title>
+    <title>signin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <script src="./script/jquery.min.js"></script>	
-    <script src="./script/aws-sdk-2.487.0.min.js"></script>
-    <script src="./script/aws-cognito-sdk.min.js"></script>
-    <script src="./script/amazon-cognito-identity.min.js"></script>
+    <script src="/client/script/jquery.min.js"></script>	
+    <script src="/client/script/aws-sdk-2.487.0.min.js"></script>
+    <script src="/client/script/aws-cognito-sdk.min.js"></script>
+    <script src="/client/script/amazon-cognito-identity.min.js"></script>
 
     <div class="center-block">
-        <div class="mt-5"></div>
-        <input id="emailInput" type="text" placeholder="Email" class="form-control" aria-label="default input example"/></br>
+    <div class="mt-5"></div>
+    <input id="emailInput" type="text" placeholder="Email" class="form-control" aria-label="default input example"/></br>
     <input id="userNameInput" type="text" placeholder="Username" class="form-control" aria-label="default input example"/></br>
     <input id="passwordInput" type="password" placeholder="Password" class="form-control" aria-label="default input example"/></br>
     <input id="confirmPasswordInput" type="password" placeholder="Confirm Password" style="display:none" class="form-control" aria-label="default input example"/></br>
@@ -234,41 +234,6 @@
                 $("#loader").hide();
             });
         }
-
-        /*
-        This method will use AWS S3 SDK to get a list of S3 bucket object.
-        Before using this method, AWS Credentials must be set in AWS config.
-        */
-    
-        /*
-        function getAWSS3BucketObjects(){            
-            var s3 = new AWS.S3();
-
-            var params = {
-                Bucket: $("#bucketNameInput").val()
-            };
-
-            s3.listObjects(params, function(err, data) {
-                if (err) logMessage(err.message);
-                else{
-                    logMessage('');
-                    logMessage('====== S3 Bucket Objects ======');
-                    data.Contents.forEach(element => {
-                        logMessage(element.Key);
-                    });
-                    logMessage('');
-                }
-
-                $("#loader").hide();
-            });
-        }
-        */
-
-        /*
-        If user has logged in before, get the previous session so user doesn't need to log in again.
-        */
-
-
         //セッション機能
         
         function getCurrentLoggedInSession(){

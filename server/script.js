@@ -135,14 +135,7 @@ all_show.addEventListener('click',() => {
 })
 
 
-const remove = document.createElement('button');
-remove.textContent = 'delete low bottle';
-remove.id = 'remove';
-const br = document.createElement('br');
-main.appendChild(br);
-main.appendChild(remove);
-
-remove.addEventListener('click', () => {
+delete_button.addEventListener('click', () => {
   console.log("ok")
   clearTable();
   list = list.filter((item) => item.low == false);

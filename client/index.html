@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Chapter 14: TODOリスト</title>
+  <title>お酒在庫チェッカー</title>
 </head>
 <body>
   <main>
@@ -23,16 +23,16 @@
       <div class="row">
         <div class="col">
           <label for="Select1"></label>
-          <select class="form-control" placeholder="choos bouttel category" aria-label="Default select example" id="select">
-            <option value="8" hidden>choos bouttel category</option>
-            <option value="1">ウイスキー</option>
-            <option value="2">ウォッカ</option>
-            <option value="3">ジン</option>
-            <option value="4">テキーラ</option>
-            <option value="5">日本酒</option>
-            <option value="6">焼酎</option>
-            <option value="7">リキュール</option>
-            <option value="8">その他</option>
+          <select class="form-control" placeholder="choos bottle category" aria-label="Default select example" id="select">
+            <option value="その他" hidden>choos bottle category</option>
+            <option value="ウイスキー">ウイスキー</option>
+            <option value="ウォッカ">ウォッカ</option>
+            <option value="ジン">ジン</option>
+            <option value="テキーラ">テキーラ</option>
+            <option value="日本酒">日本酒</option>
+            <option value="焼酎">焼酎</option>
+            <option value="リキュール">リキュール</option>
+            <option value="その他">その他</option>
           </select>
         </div>
         <div class="col-auto"></div>
@@ -41,14 +41,14 @@
             <select class="form-control" placeholder="Search category" aria-label="Default select example" id="cat_select">
               <optino value="0" hidden>SearchCategory</optino>
               <option value="0">すべて</option>
-              <option value="1">ウイスキー</option>
-              <option value="2">ウォッカ</option>
-              <option value="3">ジン</option>
-              <option value="4">テキーラ</option>
-              <option value="5">日本酒</option>
-              <option value="6">焼酎</option>
-              <option value="7">リキュール</option>
-              <option value="8">その他</option>
+              <option value="ウイスキー">ウイスキー</option>
+              <option value="ウォッカ">ウォッカ</option>
+              <option value="ジン">ジン</option>
+              <option value="テキーラ">テキーラ</option>
+              <option value="日本酒">日本酒</option>
+              <option value="焼酎">焼酎</option>
+              <option value="リキュール">リキュール</option>
+              <option value="その他">その他</option>
             </select>
           </div>
       </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <br>
-      <button id="logOutButton" type="Button" value="Log Out" class="btn btn-danger" onclick="logOut()">Log out</button>
+      <button id="logOutButton" type="button" value="Log Out" class="btn btn-danger" onclick="logOut()">Log out</button>
       <br>
     </div>
   </div>
@@ -76,6 +76,7 @@
         <th scope="col">low</th>
       </tr>
     </table>
+    <button id="delete_button" type="button" value="delete" class="btn btn-danger">delete low bottle</button>
   </main>
   <script src="/server/script.js"></script>
 </body>
