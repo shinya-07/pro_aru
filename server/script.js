@@ -160,7 +160,7 @@ function logOut(){
       cognitoUser.signOut();
       logMessage('Logged out!');
       $("#loader").hide();
-      location.href ='../signup.html'
+      location.href ='/client/signup.html'
   }
 }
 
