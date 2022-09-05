@@ -23,7 +23,7 @@
         <input id="logInButton" type="Button" value="Log In" onclick="logIn()" class="btn btn-primary">
         <input id="registerButton" type="button" value="Register" onclick="register()" class="btn btn-success">
         <input id="logOutButton" type="Button" value="Log Out" onclick="logOut()" style="display:none" class="btn btn-danger">
-        <input id="verifyCodeButton" type="button" value="Verify" onclick="verifyCode()" style="display:none">
+        <input id="verifyCodeButton" type="button" value="Verify" onclick="verifyCode()" style="display:none" class="btn btn-success">
         <input id="listS3ObjectsButton" type="button" value="List S3 Objects" onclick="listS3Objects()" style="display:none"></br></br>
         <input id="clearLogsButton" type="button" value="Clear Logs" onclick="clearLogs()" class="btn btn-secondary">
         </br></br>
@@ -70,6 +70,22 @@
             $("#passwordInput").show();
             $("#confirmPasswordInput").show();
             $("#logInButton").hide();
+            $("#registerButton").show();
+            $("#verificationCodeInput").hide();
+            $("#verifyCodeButton").hide();
+            $("#listS3ObjectsButton").hide();
+            $("#bucketNameInput").hide();
+            $("#logOutButton").hide();
+        }
+
+        function switchToLogInView(){
+            $("#userNameInput").val('');
+            $("#passwordInput").val('');
+            $("#emailInput").hide();
+            $("#userNameInput").show();
+            $("#passwordInput").show();
+            $("#confirmPasswordInput").hide();
+            $("#logInButton").show();
             $("#registerButton").show();
             $("#verificationCodeInput").hide();
             $("#verifyCodeButton").hide();
